@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitaBalance PWA</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#00B37E">
+  </head>
+  <body style="text-align:center; font-family:sans-serif; margin-top:40px;">
+    <h2>✅ VitaBalance PWA ativo!</h2>
+    <p>O manifesto e o service worker foram carregados com sucesso.</p>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('pwabuilder-sw.js')
+          .then(() => console.log("Service Worker ativo!"))
+          .catch(console.error);
+      }
+    </script>
+  </body>
+</html>
+
